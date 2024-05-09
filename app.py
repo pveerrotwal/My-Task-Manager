@@ -6,7 +6,7 @@ from starlette.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 from database import SessionLocal, engine
 import models
-import auth
+
 models.Base.metadata.create_all(bind=engine)
 
 templates = Jinja2Templates(directory="templates")
@@ -49,5 +49,3 @@ def add(req: Request, todo_id: int, db: Session = Depends(get_db)):
     db.commit()
     url = app.url_path_for("home")
     return RedirectResponse(url=url, status_code=status.HTTP_303_SEE_OTHER)
-
-app.include_router(auth.router)
