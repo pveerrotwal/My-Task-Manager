@@ -59,6 +59,8 @@ This command starts the Uvicorn server and reloads the app automatically wheneve
 
 Once the server is running, you can access the app in your web browser at **`http://localhost:8000`**.
 
+![alt text](<Screenshot 2024-05-09 at 5.41.44 PM.png>)
+
 ## **Functionality**
 
 ### **1. Home Page (`/`)**
@@ -102,7 +104,18 @@ Once the server is running, you can access the app in your web browser at **`htt
 - Provides the HTML template for rendering the user interface.
 - Includes form for adding tasks and displays a list of tasks.
 
-![alt text](<Screenshot 2024-05-09 at 5.41.44 PM.png>)
+### **API Backend**
+The API backend of the FastAPI ToDo App consists of several routes for managing todo tasks:
+
+You can access the api in your web browser at **`http://localhost:8000/docs`**.
+
+- `app.py`: Defines the FastAPI application and routes. Handles requests for adding, updating, and deleting tasks.
+- `database.py`: Configures the database connection using SQLAlchemy.
+- `models.py`: Defines the Todo model using SQLAlchemy.
+- `templates/base.html`: Provides the HTML template for rendering the user interface. Includes a form for adding tasks and displays a list of tasks.
+
+<img width="1433" alt="Screenshot 2024-05-10 at 8 33 30 AM" src="https://github.com/pveerrotwal/My-Task-Manager/assets/108364147/ec8be281-3e40-42d6-9574-d9b33fa99ce0">
+
 
 ## **Conclusion**
 
